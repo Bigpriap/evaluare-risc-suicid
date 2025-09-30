@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluare de Înaltă Fidelitate a Riscului de Suicid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Evaluare de Înaltă Fidelitate a Riscului de Suicid 🔬</h1>
+        <h4>Autori: Lavinia Duica & Catalin Plesea-Condratovici</h4>
+        <p>Prototip 100% conform modelului academic.</p>
+
+        <form id="riskForm">
+            <div class="form-columns">
+                
+                <div class="column">
+                    <fieldset>
+                        <legend>Domeniul Psihiatric (Pondere 40%)</legend>
+                        <div class="form-group"><label for="depresie">Tulburare Depresivă Majoră:</label><select id="depresie" name="depresie"><option value="0">N/A</option><option value="6">Ușoară (1-6p)</option><option value="13">Moderată (7-13p)</option><option value="20">Severă (14-20p)</option></select></div>
+                        <div class="form-group"><label for="bipolar">Tulburare Bipolară (episod depresiv/mixt):</label><select id="bipolar" name="bipolar"><option value="0">N/A</option><option value="10">Ușor (1-10p)</option><option value="20">Mediu (11-20p)</option><option value="30">Sever (21-30p)</option></select></div>
+                        <div class="form-group"><label for="psihotic">Simptome Psihotice Active cu conținut suicidar:</label><select id="psihotic" name="psihotic"><option value="0">N/A</option><option value="5">Ușor (1-5p)</option><option value="10">Moderat (6-10p)</option><option value="15">Sever (11-15p)</option></select></div>
+                        <div class="form-group"><label for="intoxicatie">Intoxicație acută / sevraj la substanțe:</label><select id="intoxicatie" name="intoxicatie"><option value="0">N/A</option><option value="2">Ușor (1-2p)</option><option value="5">Moderat (3-5p)</option><option value="8">Sever (6-8p)</option></select></div>
+                        <div class="form-group"><label for="tp">Tulburări de Personalitate (impact recent):</label><select id="tp" name="tp"><option value="0">N/A</option><option value="4">Stabilitate (0-4p)</option><option value="8">Moderat (5-8p)</option><option value="12">Impulsivitate marcată (9-12p)</option></select></div>
+                        <div class="form-group"><label for="tnc">Tulburare Neurocognitivă:</label><select id="tnc" name="tnc"><option value="0">N/A / Stadiu avansat</option><option value="6">Moderat (4-6p)</option><option value="10">Incipient (7-10p)</option></select></div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Domeniul Istoric Personal (Pondere 30%)</legend>
+                        <div class="form-group"><label for="tentative">Tentative Anterioare de Suicid:</label><select id="tentative" name="tentative"><option value="0">Niciuna</option><option value="15">O singură tentativă în ultimul an</option><option value="20">Multiple / Letalitate înaltă</option><option value="25">Tentativă în ultima lună</option></select></div>
+                        <div class="form-group"><label>Auto-vătămare Non-suicidară (NSSI) în ultimul an:</label><div class="checkbox-group"><input type="checkbox" id="nssi_base" name="nssi_base" value="5"><label for="nssi_base">Prezentă (+5p)</label></div><label>Frecvență NSSI:</label><div class="checkbox-group"><input type="checkbox" id="nssi_freq" name="nssi_freq" value="1"><label for="nssi_freq">Ocazională (+1p)</label> <input type="checkbox" id="nssi_freq2" name="nssi_freq2" value="2"><label for="nssi_freq2">Lunară (+2p)</label> <input type="checkbox" id="nssi_freq3" name="nssi_freq3" value="3"><label for="nssi_freq3">Săptămânală (+3p)</label></div><label>Severitate NSSI:</label><div class="checkbox-group"><input type="checkbox" id="nssi_sev" name="nssi_sev" value="1"><label for="nssi_sev">Minimă (+1p)</label> <input type="checkbox" id="nssi_sev2" name="nssi_sev2" value="2"><label for="nssi_sev2">UPU (+2p)</label> <input type="checkbox" id="nssi_sev3" name="nssi_sev3" value="3"><label for="nssi_sev3">Internare (+3p)</label></div></div>
+                        <div class="form-group"><label for="familial">Istoric Familial de Suicid:</label><select id="familial" name="familial"><option value="0">Niciunul</option><option value="5">Rudă grad II</option><option value="10">Rudă grad I</option></select></div>
+                        <div class="form-group"><label for="trauma">Traume din copilărie (abuz sever):</label><select id="trauma" name="trauma"><option value="0">Nu</option><option value="5">Un tip, impact moderat (5p)</option><option value="7">Abuz fizic/sexual izolat (7p)</option><option value="8">Polivictimizare / Impact major (8p)</option></select></div>
+                    </fieldset>
+                </div>
+
+                <div class="column">
+                    <fieldset>
+                        <legend>Domeniul Socio-Demografic (Pondere 20%)</legend>
+                        <div class="form-group"><label>Factori de Risc Demografici (bifați ce se aplică):</label><div class="checkbox-group"><input type="checkbox" id="gen" name="gen" value="5"><label for="gen">Gen masculin (+5p)</label></div><div class="checkbox-group"><input type="checkbox" id="varsta" name="varsta" value="5"><label for="varsta">Vârstă la risc (15-24 sau >65) (+5p)</label></div><div class="checkbox-group"><input type="checkbox" id="izolare" name="izolare" value="10"><label for="izolare">Izolare socială severă (+10p)</label></div><div class="checkbox-group"><input type="checkbox" id="financiar" name="financiar" value="8"><label for="financiar">Criză financiară acută (+8p)</label></div></div>
+                        <div class="form-group"><label>Factori Protectori (bifați ce se aplică):</label><div class="checkbox-group"><input type="checkbox" id="protector_copii" name="protector_copii" value="-5"><label for="protector_copii">Responsabilități față de copii minori (-5p)</label></div><div class="checkbox-group"><input type="checkbox" id="protector_suport" name="protector_suport" value="-5"><label for="protector_suport">Suport social activ (-5p)</label></div><div class="checkbox-group"><input type="checkbox" id="protector_religie" name="protector_religie" value="-3"><label for="protector_religie">Implicare religioasă activă (-3p)</label></div></div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Domeniul Contextual Acut (Pondere 10%)</legend>
+                        <div class="form-group"><label>Stresori Recenți (bifați ce se aplică):</label><div class="checkbox-group"><input type="checkbox" id="stresor1" name="stresor1" value="10"><label for="stresor1">Pierdere interpersonală majoră</label></div><div class="checkbox-group"><input type="checkbox" id="stresor2" name="stresor2" value="8"><label for="stresor2">Conflict sever cu umilire</label></div><div class="checkbox-group"><input type="checkbox" id="stresor3" name="stresor3" value="7"><label for="stresor3">Probleme legale iminente</label></div><div class="checkbox-group"><input type="checkbox" id="stresor4" name="stresor4" value="6"><label for="stresor4">Criză financiară acută</label></div><div class="checkbox-group"><input type="checkbox" id="stresor5" name="stresor5" value="5"><label for="stresor5">Diagnostic medical grav</label></div></div>
+                        <div class="form-group"><label for="stresor_timp">Factor Temporal (Alpha) pentru stresorii de mai sus:</label><select id="stresor_timp" name="stresor_timp"><option value="0">N/A</option><option value="1">În ultimele 48 de ore (x1.0)</option><option value="0.75">În ultima săptămână (x0.75)</option><option value="0.5">În ultima lună (x0.5)</option></select></div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <fieldset class="imminence-flag">
+                 <legend>🚩 Flag de Iminență (Suprascrie Scorul)</legend>
+                <div class="form-group"><label for="flag_imminence">Există plan specific ȘI acces la mijloace SAU pregătiri comportamentale?</label><select id="flag_imminence" name="flag_imminence"><option value="0">Nu</option><option value="1">Da</option></select></div>
+            </fieldset>
+
+            <button type="submit">Calculează Riscul</button>
+            
+            <div id="result">
+                </div>
+
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
